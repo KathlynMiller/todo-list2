@@ -1,5 +1,5 @@
 <?php 
-//Why is this important? Why does loclahost habe to be first?
+//Why is this important? Why does loclahost have to be first?
 $mysqli = new mysqli('losthost', 'root', 'root', 'tasks'); 
 //$mysqli->connect_error then we want it to die and have message
 if ($mysqli->connect_error){
@@ -7,7 +7,7 @@ if ($mysqli->connect_error){
       . $mysqli->error);
 }
 else{
-  echo "Connection made"; // echoing connection made
+  echo "Connection made"; // echo connection has been made
 }
 $mysqli->close();
 
