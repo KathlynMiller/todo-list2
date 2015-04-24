@@ -8,7 +8,23 @@
   <div class="warp">
     <div class="task-list">
     <ul>
-      <?php require("include/connect.php"); ?>
+      <?php require("include/connect.php"); 
+        $mysqli = new sqli('localhost', 'root', 'root', 'todo');
+        $query ="SELECT * FROM tasks ORDER BY date ASC, time ASC";
+        if($result= $mysqli->query($query)){
+           $numrows = $result->num_rows:
+           if($numrows>0){
+              while($row = $result->fetch_assoc()){
+                $task_id $row('id');
+                $task_name = $row("task");
+
+            echo "<li>
+            <span>"
+          }
+        }
+        
+      }
+      ?>
    </ul>
  </div>
   <form class="add-new-task" autocomplete="off">
@@ -41,6 +57,6 @@
       });
     });
   });
-     
+
 </script>
 </html> 
